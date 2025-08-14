@@ -98,7 +98,7 @@ for comp, work in raw_items:
         seen.add(key)
         cleaned.append((comp, work))
 
-data_dir = Path("/mnt/data")
+data_dir = Path("/tmp/spotify_data")  # instead of Path("spotify_data") or similar
 data_dir.mkdir(parents=True, exist_ok=True)
 
 works_csv = data_dir / "works.csv"
