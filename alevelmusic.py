@@ -308,8 +308,8 @@ readme_path.write_text(readme_text, encoding="utf-8")
 # Show a small preview of the works list
 import pandas as pd
 df = pd.read_csv(works_csv)
-from caas_jupyter_tools import display_dataframe_to_user
-display_dataframe_to_user("Preview of works.csv", df.head(12))
+import streamlit as st
+st.dataframe(df.head(12))
 
 print("Files created:")
 print(works_csv)
